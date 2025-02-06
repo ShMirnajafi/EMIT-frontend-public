@@ -3,6 +3,7 @@
 import BlockChainIcon from "@/components/Icons/BlockChainIcon";
 import NebkaIcon from "@/components/Icons/NebkaIcon";
 import NebkaTextIcon from "@/components/Icons/NebkaTextIcon";
+import StartIcon from "@/components/Icons/StartIcon";
 
 export default function Main() {
     return (
@@ -17,7 +18,12 @@ export default function Main() {
 
                 <div className="mt-10 flex space-x-4 float-right">
                     <button className="bg-[#C45D39] text-white px-6 py-3 rounded-md flex items-center space-x-2 hover:bg-[#A8482D]">
-                        <span>شروع کنید</span>
+                        <span className="flex space-x-4">
+                            <StartIcon/>
+                            <div>
+                                شروع کنید
+                            </div>
+                        </span>
                     </button>
                 </div>
 
