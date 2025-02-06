@@ -21,7 +21,7 @@ export default function Main() {
                     </button>
                 </div>
 
-                <div className="mt-64 space-x-4 flex float-right">
+                <div className="mt-64 space-x-4 space-y-5 grid grid-cols-2 float-right justify-items-end">
                     <NebkaIcon/>
                     <NebkaTextIcon/>
                 </div>
