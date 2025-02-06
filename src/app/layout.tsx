@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
     return (
         <html lang="en">
-        <body className="bg-violet-950">
-        <link rel="icon" href="/icon.svg"/>
+        <body className="bg-[#0B253A]">
+        <link rel="icon" href="/icon.png"/>
         <NavigationBar/>
         {children}
         <Footer/>
