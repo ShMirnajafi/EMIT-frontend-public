@@ -8,15 +8,15 @@ export default function NavigationBar() {
     return (
         <nav className="w-full bg-[#0B253A] py-4 px-20 flex justify-between items-center">
             <div className="mx-5">
-                <NavigationLogo/>
+                <NavigationAuth/>
             </div>
 
-            <div>
+            <div className="mx-5">
                 <NavigationLinks/>
             </div>
 
-            <div>
-                <NavigationAuth/>
+            <div className="mx-5">
+                <NavigationLogo/>
             </div>
         </nav>
     );
