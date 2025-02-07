@@ -1,22 +1,24 @@
+'use client'
+
 import React from 'react';
+import {useBasket} from "@/context/basketContext";
 
 interface DrawerProps {
     isOpen: boolean;
     onClose: () => void;
-    basketItems: { id: number; title: string; price: string }[];
 }
 
-const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, basketItems }) => {
+const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
+    const { basketItems } = useBasket();
+
     return (
         <div>
-            {/* Overlay to close drawer when clicking outside */}
             {isOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-40"
                     onClick={onClose}
                 ></div>
             )}
-            {/* Drawer */}
             <div
                 className={`fixed top-0 left-0 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${
                     isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -49,7 +51,6 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose, basketItems }) => {
                         <p className="text-gray-500 text-center">سبد خرید شما خالی است</p>
                     )}
                 </div>
-                {/* Payment Section */}
                 <div className="p-4 border-t">
                     <input
                         type="text"
