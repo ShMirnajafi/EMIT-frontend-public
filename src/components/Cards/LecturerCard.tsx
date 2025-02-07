@@ -11,20 +11,24 @@ interface LecturerCard {
 
 function Lecturer(props: LecturerCard) {
     return (
-        <div key={props.id} className="bg-[#1C2D42] rounded-xl p-4 text-center relative shadow-lg">
-            <Image
-                alt={props.name}
-                src={props.image}
-                width={300}
-                height={400}
-                className="rounded-lg"
-            />
-            <div
-                className="absolute bottom-4 left-4 right-4 bg-gray-100 text-gray-900 rounded-lg p-2 flex items-center justify-between">
-                <span className="font-semibold text-lg">{props.name}</span>
-                <AUTIcon/>
+        <div className="bg-[#0B253A] rounded-xl shadow-lg w-72 overflow-hidden relative m-2.5">
+            <div>
+                <Image
+                    alt={props.name}
+                    src={props.image}
+                    width={288}
+                    height={450}
+                />
+                <div className="absolute my-2 bottom-0 w-[90%] left-1/2 transform -translate-x-1/2 bg-gray-100 px-4 py-3 rounded-lg shadow-md flex flex-col items-center justify-center space-y-1">
+                    <div className="flex items-center justify-around w-full">
+                        <span className="text-[#0B253A] font-bold text-lg">{props.name}</span>
+                        <div className="w-8 h-8">
+                            <AUTIcon />
+                        </div>
+                    </div>
+                    <span className="m-1 text-[#D05353] font-medium">{props.role}</span>
+                </div>
             </div>
-            <p className="absolute bottom-2 left-4 text-red-500 font-semibold">{props.role}</p>
         </div>
     );
 }
