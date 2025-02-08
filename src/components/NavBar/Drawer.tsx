@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {useBasket} from "@/context/basketContext";
+import Link from "next/link";
 
 interface DrawerProps {
     isOpen: boolean;
@@ -57,9 +58,9 @@ const Drawer: React.FC<DrawerProps> = ({ isOpen, onClose }) => {
                         placeholder="کد تخفیف وارد کنید"
                         className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#C45D39]"
                     />
-                    <button className="mt-4 w-full bg-[#C45D39] text-white py-2 rounded-md hover:bg-[#A8482D]">
+                    <Link href='#' className="mt-4 w-full bg-[#C45D39] text-white py-2 rounded-md hover:bg-[#A8482D]">
                         پرداخت
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
